@@ -5,7 +5,19 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      height: {
+        '128': '26rem',
+      },
+      colors: {
+        'san': '#D4145A',
+        'guine': '#FBB03B'
+      },
+      fontFamily: {
+        'Beauty': ['Allura', 'cursive'],
+        'Dance': [ 'Pacifico', 'cursive'],
+      },
+    },
   },
   plugins: [],
 }

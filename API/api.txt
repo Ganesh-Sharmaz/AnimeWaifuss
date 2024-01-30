@@ -1,0 +1,2 @@
+https://api.waifu.pics/sfw/waifu
+https://api.waifu.pics/nsfw/waifu
