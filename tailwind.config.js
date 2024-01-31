@@ -20,10 +20,10 @@ export default {
       scale: {
         '128': '2',
       },
-      backgroundImage: theme => ({
-               'hero-pattern': "url('wallpaperflare.com_wallpaper.jpg')",
-               
-                }),
+      width: {
+        '128': '450px',
+      },
+
     },
   },
   plugins: [],
