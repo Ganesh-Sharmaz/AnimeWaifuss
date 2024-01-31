@@ -17,6 +17,13 @@ export default {
         'Beauty': ['Allura', 'cursive'],
         'Dance': [ 'Pacifico', 'cursive'],
       },
+      scale: {
+        '128': '2',
+      },
+      backgroundImage: theme => ({
+               'hero-pattern': "url('wallpaperflare.com_wallpaper.jpg')",
+               
+                }),
     },
   },
   plugins: [],
