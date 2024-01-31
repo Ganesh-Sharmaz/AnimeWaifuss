@@ -105,6 +105,7 @@
 }
 
 .btn-23 {
+  padding-top: 5px;
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: button;
   background-color: #000;

@@ -2,19 +2,84 @@ import { useState, useEffect } from 'react'
 import './App.css'
 
 
-function App() {
 
-  const Url = "https://api.waifu.pics/sfw/waifu"
+function App() {
+  useEffect(() => {
+
+    const apiUrl = "https://api.waifu.pics/sfw/waifu"
+    
+
+
+
+
+    const fetchImage1 = async() => {
+      const response1 = await fetch(apiUrl)
+      const data1 = await response1.json()
+      
+
+      
+
+      
+      if (
+        response1.ok ){
+        setWaifu(data1.url)
+      }
+  }
+  fetchImage1();
+    
+    
+  }, []);
+  useEffect(() => {
+
+    const apiUrl = "https://api.waifu.pics/sfw/waifu"
+    
+
+
+
+
+    const fetchImage2 = async() => {
+      const response2 = await fetch(apiUrl)
+      const data2 = await response2.json()
+    if (
+        response2.ok ){
+        setWaifu2(data2.url)
+      }
+  }
+  fetchImage2();
+    
+    
+  }, []);
 
   useEffect(() => {
-    effect
-    return () => {
-      cleanup
-    };
-  }, [input]);
+
+    const apiUrl = "https://api.waifu.pics/sfw/waifu"
+    
 
 
 
+
+    const fetchImage3 = async() => {
+      const response3 = await fetch(apiUrl)
+      const data3 = await response3.json()
+    if (
+        response3.ok ){
+        setWaifu3(data3.url)
+      }
+  }
+  fetchImage3();
+    
+    
+  }, []);
+  
+  
+
+  
+
+
+  
+  const [waifu, setWaifu] = useState('')
+  const [waifu2, setWaifu2] = useState('')
+  const [waifu3, setWaifu3] = useState('')
   const [type, setType] = useState('')
   const [category, setCategory] = useState('')
   const [nsfwAllowed, setNsfwAllowed] = useState(false)
@@ -25,36 +90,49 @@ function App() {
     <>
       <div id='back' className='flex flex-col min-h-screen bg-no-repeat ' >
         {/* header starts here */}
-        <div className='w-full h-14 bg-black shadow-xl flex justify-around items-center '>
-          <div className=' scale-128'><p id="glow">Anime Waifus</p></div>
+        <div className='w-full h-14 bg-black shadow-xl flex justify-between
+         items-center '>  
+          <div className=' pl-20 flex justify-start scale-128'><p id="glow">Anime Waifus</p></div>
           
-          <label class="relative inline-flex items-center cursor-pointer scale-50">
-  <input type="checkbox"
-  defaultChecked = {nsfwAllowed}  
-  onChange={() => {setNsfwAllowed((prev) => !prev)}}
-     class="sr-only peer"/>
-  <div class="group peer ring-0 bg-rose-400  rounded-full outline-none duration-300 after:duration-300 w-24 h-12  shadow-md peer-checked:bg-emerald-500  peer-focus:outline-none  after:content-[''] after:rounded-full after:absolute after:bg-gray-50 after:outline-none after:h-10 after:w-10 after:top-1 after:left-1 after:flex after:justify-center after:items-center peer-checked:after:translate-x-12 peer-hover:after:scale-95">
-    <svg class="absolute  top-1 left-12 stroke-gray-900 w-10 h-10" height="100" preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100" width="100" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
- <path class="svg-fill-primary" d="M50,18A19.9,19.9,0,0,0,30,38v8a8,8,0,0,0-8,8V74a8,8,0,0,0,8,8H70a8,8,0,0,0,8-8V54a8,8,0,0,0-8-8H38V38a12,12,0,0,1,23.6-3,4,4,0,1,0,7.8-2A20.1,20.1,0,0,0,50,18Z">
- </path>
-</svg>
-    <svg class="absolute top-1 left-1 stroke-gray-900  w-10 h-10" height="100" preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100" width="100" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
- <path d="M30,46V38a20,20,0,0,1,40,0v8a8,8,0,0,1,8,8V74a8,8,0,0,1-8,8H30a8,8,0,0,1-8-8V54A8,8,0,0,1,30,46Zm32-8v8H38V38a12,12,0,0,1,24,0Z" fill-rule="evenodd">
- </path>
-</svg>
-  </div>
-</label>
-
-
-          
-
-          
-        </div>
+              <label class="relative  inline-flex items-center cursor-pointer scale-50 pr-12">
+                <input type="checkbox"
+                defaultChecked = {nsfwAllowed}  
+                onChange={() => {setNsfwAllowed((prev) => !prev)}}
+                   class="sr-only peer"/>
+                <div class="group peer ring-0 bg-rose-400  rounded-full outline-none duration-300 after:duration-300 w-24 h-12  shadow-md peer-checked:bg-emerald-500  peer-focus:outline-none  after:content-[''] after:rounded-full after:absolute after:bg-gray-50 after:outline-none after:h-10 after:w-10 after:top-1 after:left-1 after:flex after:justify-center after:items-center peer-checked:after:translate-x-12 peer-hover:after:scale-95">
+                  <svg class="absolute  top-1 left-12 stroke-gray-900 w-10 h-10" height="100" preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100" width="100" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
+               <path class="svg-fill-primary" d="M50,18A19.9,19.9,0,0,0,30,38v8a8,8,0,0,0-8,8V74a8,8,0,0,0,8,8H70a8,8,0,0,0,8-8V54a8,8,0,0,0-8-8H38V38a12,12,0,0,1,23.6-3,4,4,0,1,0,7.8-2A20.1,20.1,0,0,0,50,18Z">
+               </path>
+              </svg>
+                  <svg class="absolute top-1 left-1 stroke-gray-900  w-10 h-10" height="100" preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100" width="100" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
+               <path d="M30,46V38a20,20,0,0,1,40,0v8a8,8,0,0,1,8,8V74a8,8,0,0,1-8,8H30a8,8,0,0,1-8-8V54A8,8,0,0,1,30,46Zm32-8v8H38V38a12,12,0,0,1,24,0Z" fill-rule="evenodd">
+               </path>
+              </svg>
+                </div>
+              </label>
+           </div>
 
         {/* Picture Section */}
 
         <div className='flex-1 flex w-full justify-center items-center flex-col '>
-          <div className=' h-128 w-128  rounded-2xl shadow-xl backdrop-blur-md outline-cyan-500'></div>
+        <div className='flex gap-3 pb-2'>
+            
+              <div  id='card' className=' h-128 w-80  rounded-2xl shadow-xl backdrop-blur-md outline-cyan-500 object-contain overflow-hidden'>
+              {waifu && <img src={waifu} className=' '/>}
+              </div>
+              <div  id='card' className=' h-128 w-80  rounded-2xl shadow-xl backdrop-blur-md outline-cyan-500 object-contain overflow-hidden'>
+              {waifu2 && <img src={waifu2} className=' '/>}
+              </div>
+              <div  id='card' className=' h-128 w-80  rounded-2xl shadow-xl backdrop-blur-md outline-cyan-500 object-contain overflow-hidden'>
+              {waifu3 && <img src={waifu3} className=' '/>}
+              </div>
+             
+          
+          
+              </div>
+          
+          
+          
 
           <button class="btn-23">
             <span class="text">Next</span>
@@ -66,7 +144,7 @@ function App() {
 
         {/* Footer Section  */}
 
-        <div className='w-full bg-black shadow-xl flex justify-around py-1 items-center bg-cover bg-no-repeat h-12'>
+        <div className='w-full bg-black shadow-xl flex justify-around py-1 items-center bg-cover bg-no-repeat '>
           <div className=' font-Dance text-2xl text-white'>Made with Love for the cuties</div>
         <ul className='flex space-x-7 items-center'>
           
