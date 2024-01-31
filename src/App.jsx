@@ -23,7 +23,7 @@ function App() {
         {/* Picture Section */}
 
         <div className='flex-1 flex w-full justify-center items-center flex-col '>
-          <div className=' h-128 w-96  rounded-2xl shadow-xl backdrop-blur-md outline-cyan-500'></div>
+          <div className=' h-128 w-128  rounded-2xl shadow-xl backdrop-blur-md outline-cyan-500'></div>
           
 
         </div>
