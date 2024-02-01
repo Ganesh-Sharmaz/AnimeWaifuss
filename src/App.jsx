@@ -124,7 +124,7 @@ return (
 
         <div className='flex-1 flex w-full justify-center items-center flex-col  '>
           <div className='flex gap-3 pb-2 '>
-            <div  id='card' className=' h-128 md:w-80 rounded-2xl shadow-xl backdrop-blur-md outline-cyan-500 object-contain overflow-hidden'>
+            <div  id='card' className=' md:h-128 md:w-80 rounded-2xl shadow-xl backdrop-blur-md outline-cyan-500 object-contain overflow-hidden sm:h-130'>
               {waifu && <img src={waifu} className=' '/>}
             </div>
               

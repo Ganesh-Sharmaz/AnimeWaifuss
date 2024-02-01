@@ -8,6 +8,7 @@ export default {
     extend: {
       height: {
         '128': '26rem',
+        '130': '500px'
       },
       colors: {
         'san': '#D4145A',
