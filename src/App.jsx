@@ -1,18 +1,33 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import './App.css'
 
 
 
 function App() {
-  useEffect(() => {
 
-    const apiUrl = "https://api.waifu.pics/sfw/waifu"
+  const [type, setType] = useState('sfw')
+  const [waifu, setWaifu] = useState('')
+  const [waifu2, setWaifu2] = useState('')
+  const [waifu3, setWaifu3] = useState('')
+ 
+  const [category, setCategory] = useState('')
+  const [nsfwAllowed, setNsfwAllowed] = useState(false)
+
+
+
+
+
+    
+
+
+      const apiUrl = `https://api.waifu.pics/${type}/waifu`
     
 
 
 
 
     const fetchImage1 = async() => {
+      
       const response1 = await fetch(apiUrl)
       const data1 = await response1.json()
       
@@ -25,18 +40,9 @@ function App() {
         setWaifu(data1.url)
       }
   }
-  fetchImage1();
+
+
     
-    
-  }, []);
-  useEffect(() => {
-
-    const apiUrl = "https://api.waifu.pics/sfw/waifu"
-    
-
-
-
-
     const fetchImage2 = async() => {
       const response2 = await fetch(apiUrl)
       const data2 = await response2.json()
@@ -45,17 +51,6 @@ function App() {
         setWaifu2(data2.url)
       }
   }
-  fetchImage2();
-    
-    
-  }, []);
-
-  useEffect(() => {
-
-    const apiUrl = "https://api.waifu.pics/sfw/waifu"
-    
-
-
 
 
     const fetchImage3 = async() => {
@@ -66,27 +61,33 @@ function App() {
         setWaifu3(data3.url)
       }
   }
-  fetchImage3();
-    
-    
-  }, []);
-  
-  
+  useEffect(()=>{
+    fetchImage1();
+    fetchImage2();
+    fetchImage3();
+  }, [setType])
 
+  const handleType = () => {
+    setType((prev) => (prev === 'sfw' ? 'nsfw' : 'sfw') );
   
+  }
+
+  const btnChange = () => {
+    fetchImage1();
+    fetchImage2();
+    fetchImage3();
+  }
+
+  const  doDownload = () => {
+    window.open(waifu)
+    window.open(waifu2)
+    window.open(waifu3)
+  };
 
 
-  
-  const [waifu, setWaifu] = useState('')
-  const [waifu2, setWaifu2] = useState('')
-  const [waifu3, setWaifu3] = useState('')
-  const [type, setType] = useState('')
-  const [category, setCategory] = useState('')
-  const [nsfwAllowed, setNsfwAllowed] = useState(false)
-  
+   
 
-  
-  return (
+return (
     <>
       <div id='back' className='flex flex-col min-h-screen bg-no-repeat ' >
         {/* header starts here */}
@@ -97,7 +98,7 @@ function App() {
               <label class="relative  inline-flex items-center cursor-pointer scale-50 pr-12">
                 <input type="checkbox"
                 defaultChecked = {nsfwAllowed}  
-                onChange={() => {setNsfwAllowed((prev) => !prev)}}
+                onChange={handleType}
                    class="sr-only peer"/>
                 <div class="group peer ring-0 bg-rose-400  rounded-full outline-none duration-300 after:duration-300 w-24 h-12  shadow-md peer-checked:bg-emerald-500  peer-focus:outline-none  after:content-[''] after:rounded-full after:absolute after:bg-gray-50 after:outline-none after:h-10 after:w-10 after:top-1 after:left-1 after:flex after:justify-center after:items-center peer-checked:after:translate-x-12 peer-hover:after:scale-95">
                   <svg class="absolute  top-1 left-12 stroke-gray-900 w-10 h-10" height="100" preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100" width="100" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
@@ -120,7 +121,7 @@ function App() {
               <div  id='card' className=' h-128 w-80  rounded-2xl shadow-xl backdrop-blur-md outline-cyan-500 object-contain overflow-hidden'>
               {waifu && <img src={waifu} className=' '/>}
               </div>
-              <div  id='card' className=' h-128 w-80  rounded-2xl shadow-xl backdrop-blur-md outline-cyan-500 object-contain overflow-hidden'>
+               <div  id='card' className=' h-128 w-80  rounded-2xl shadow-xl backdrop-blur-md outline-cyan-500 object-contain overflow-hidden'>
               {waifu2 && <img src={waifu2} className=' '/>}
               </div>
               <div  id='card' className=' h-128 w-80  rounded-2xl shadow-xl backdrop-blur-md outline-cyan-500 object-contain overflow-hidden'>
@@ -133,11 +134,17 @@ function App() {
           
           
           
-
-          <button class="btn-23">
+          <div>
+          <button class="btn-23" onClick={btnChange}>
             <span class="text">Next</span>
             <span aria-hidden="" class="marquee">Next</span>
           </button>
+          <button class="btn-23" onClick={doDownload}>
+            <span class="text">Download</span>
+            <span aria-hidden="" class="marquee">Download</span>
+          </button>
+          </div>
+          
 
         </div>
 
