@@ -75,6 +75,7 @@
     
 }
 
+
 @keyframes animate {
 
     0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%{
@@ -257,4 +258,12 @@
 #hero-btn:hover .play {
   transform: translateX(200%);
   transition-delay: 300ms;
+}
+
+@media only screen and (max-width: 600px) {
+
+  
+
+  
+  
 }
