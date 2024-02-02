@@ -52,7 +52,7 @@ In the diverse landscapes of the internet, ensuring accessibility to all is cruc
    ```bash
    git clone https://github.com/your-username/Anime-Waifus.git
 
-###🌟 Join the Guild
+## 🌟 Join the Guild
 Embark on this collaborative journey by contributing to Anime Waifus. Whether you're passionate about React spells or have an eye for delightful design charms, your skills are welcomed. Let's make this anime haven even more enchanting together!
 
 May your contributions be as exciting as the best anime plot twists! 🚀✨
