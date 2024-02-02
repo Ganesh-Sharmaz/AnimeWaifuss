@@ -24,28 +24,38 @@ This enchanted realm is a work in progress, with more magic being woven into its
 
 Are you a React JS sorcerer? If so, feel free to skip this section. For the mere mortals ready to embark on this magical journey, install the almighty Node JS in your realm. Copy the enchanted project and witness the magic unfold on your own!
 
+```bash
+  cd passwordGenerator
+  npm run dev
+```
+
 # 🌌 Join the Quest
 
 Ready to be mesmerized? Embark on this fantastical quest into the world of Anime Waifus. Your destiny awaits at [Anime Waifu Wonderland](https://anime-waifus.vercel.app/)!
 
 ## 🤝 Collaborate and Improve
 
-The magic of this Password Generator is an ever-evolving enchantment, and we invite you to be a part of its growth! Your contributions can help make this project even more powerful and accessible to a wider audience.
+Anime Waifus is a growing enchantment, and we invite you to join us in its development journey! Your contributions can help shape this whimsical world and create a delightful experience for anime enthusiasts.
 
 ### 💡 Ideas Welcome
 
-Have a magical idea to enhance the Password Generator? Share your thoughts, suggestions, or feature requests by opening an issue. The more creative, the better – let's make this generator a masterpiece together!
+Have a brilliant idea to enhance Anime Waifus? Share your thoughts, suggestions, or feature requests by opening an issue. Let's collectively weave a tale of features that anime lovers will adore!
 
 ### 🌐 Making it Responsive
 
-In the mystical realms of the internet, accessibility is key. Help us ensure that the Password Generator is a universal spellbook by contributing to its responsiveness. Whether you are a seasoned wizard or an aspiring sorcerer, your insights and expertise are valued.
+In the diverse landscapes of the internet, ensuring accessibility to all is crucial. Help us make Anime Waifus universally enchanting by contributing to its responsiveness. Whether you're a seasoned sorcerer or an apprentice, your insights into responsive design spells are invaluable.
 
 ### 🪄 How to Contribute
 
 1. **Fork** the repository
-2. **Clone** the forked repository to your local chamber of spells
+2. **Clone** the forked repository to your local enchantment circle
    ```bash
-   git clone https://github.com/your-username/AnimeWaifuss.git
+   git clone https://github.com/your-username/Anime-Waifus.git
+
+###🌟 Join the Guild
+Embark on this collaborative journey by contributing to Anime Waifus. Whether you're passionate about React spells or have an eye for delightful design charms, your skills are welcomed. Let's make this anime haven even more enchanting together!
+
+May your contributions be as exciting as the best anime plot twists! 🚀✨
 
 
 ## 📚 Unveiling Developer's Secrets
@@ -54,11 +64,6 @@ Discover the mastermind behind this enchanting creation. Follow the footsteps of
 
 May your journey through Anime Waifu be as magical as the tales it unveils! 🧙‍♂️🌟
 
-
-```bash
-  cd AnimeWaifuss
-  npm run dev
-```
 
 
 
