@@ -25,7 +25,7 @@ This enchanted realm is a work in progress, with more magic being woven into its
 Are you a React JS sorcerer? If so, feel free to skip this section. For the mere mortals ready to embark on this magical journey, install the almighty Node JS in your realm. Copy the enchanted project and witness the magic unfold on your own!
 
 ```bash
-  cd passwordGenerator
+  cd AnimeWaifuss
   npm run dev
 ```
 
@@ -50,7 +50,7 @@ In the diverse landscapes of the internet, ensuring accessibility to all is cruc
 1. **Fork** the repository
 2. **Clone** the forked repository to your local enchantment circle
    ```bash
-   git clone https://github.com/your-username/Anime-Waifus.git
+   git clone https://github.com/Ganesh-Sharmaz/AnimeWaifuss.git
 
 ## 🌟 Join the Guild
 Embark on this collaborative journey by contributing to Anime Waifus. Whether you're passionate about React spells or have an eye for delightful design charms, your skills are welcomed. Let's make this anime haven even more enchanting together!
