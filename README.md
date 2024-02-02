@@ -6,6 +6,8 @@ Welcome to the enchanting world of Anime Waifu! 🚀
 
 Dive into a captivating website crafted with the magical touch of React JS and Tailwind. Anime Waifu is not just a site; it's an adventure, still unfolding and waiting for you to uncover its secrets.
 
+### I am a contributor
+
 ## ✨ Features that Spark Magic:
 
 ### 🔄 Toggle Button - Navigate Between Realms
