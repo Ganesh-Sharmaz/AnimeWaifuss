@@ -66,6 +66,10 @@ Discover the mastermind behind this enchanting creation. Follow the footsteps of
 
 May your journey through Anime Waifu be as magical as the tales it unveils! 🧙‍♂️🌟
 
+## How it looks!
+
+
+
 
 
 
